@@ -53,6 +53,9 @@ public class LinkedList {
 		
 		fivth.next = third;
 		System.out.println("Has Cycle? "+hasCycle(head));
+		
+		fivth.next = null;
+		System.out.println("Has Cycle? "+hasCycle(head));
 	
 	}
 
