@@ -11,18 +11,42 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.*;
 
 public class InventoryManager {
+	private static final Logger logger = Logger.getLogger(InventoryManager.class.getName());
 	private PriorityQueue<Order> orderQueue;
 	private Map<String,Product> products;
 	private ExecutorService executor;
 	
 	public InventoryManager() 
 	{
+		setupLogger();
 		this.products = new ConcurrentHashMap<>();
 		this.orderQueue = new PriorityQueue<>();
 		this.executor = Executors.newFixedThreadPool(3); 
+		logger.info("InventoryManager initialized.");
 	}
+	
+	private void setupLogger() {
+	    try {
+	        Logger rootLogger = Logger.getLogger("");
+	        Handler[] handlers = rootLogger.getHandlers();
+	        for (Handler handler : handlers) {
+	            if (handler instanceof ConsoleHandler) {
+	                rootLogger.removeHandler(handler);
+	            }
+	        }
+
+	        FileHandler fileHandler = new FileHandler("warehouse.log", true);
+	        fileHandler.setFormatter(new SimpleFormatter());
+	        logger.addHandler(fileHandler);
+	        logger.setLevel(Level.ALL);  // Log all levels
+	    } catch (IOException e) {
+	        System.out.println("Failed to setup logger: " + e.getMessage());
+	    }
+	}
+
 	
 	// Load inventory from a file
     public void loadInventoryFromFile(String filename) {
@@ -39,7 +63,9 @@ public class InventoryManager {
                 Product product = new Product(id, name, quantity, new Location(aisle, shelf, bin));
                 addProduct(product);
             }
+            logger.info("Inventory loaded successfully from " + filename);
         } catch (IOException e) {
+        	logger.severe("Error loading inventory: " + e.getMessage());
             System.out.println("Error loading inventory: " + e.getMessage());
         }
     }
@@ -52,7 +78,9 @@ public class InventoryManager {
                         + product.getLocation().getAisles() + "," + product.getLocation().getShelves() + ","
                         + product.getLocation().getBinNumbers() + "\n");
             }
+            logger.info("Inventory saved to " + filename);
         } catch (IOException e) {
+        	logger.severe("Error saving inventory: " + e.getMessage());
             System.out.println("Error saving inventory: " + e.getMessage());
         }
     }
@@ -61,6 +89,7 @@ public class InventoryManager {
 	public void addProduct(Product product) 
 	{
 		products.put(product.getId(), product);
+		logger.info("Product added: " + product);
 	}
 	
 	public Product getProduct(String id) 
@@ -71,11 +100,14 @@ public class InventoryManager {
 	public void addOrder(Order order) 
 	{
 		orderQueue.add(order);
+		logger.info("Order added: " + order);
 		System.out.println("Order added: " + order);
+		
 	}
 	
 	public void processOrders() 
 	{
+		logger.info("Order processing started.");
 		while (!orderQueue.isEmpty()) 
 		{
 			Order order = orderQueue.poll();
@@ -90,14 +122,16 @@ public class InventoryManager {
                 System.out.println("All orders processed successfully.");
             }
         } catch (InterruptedException e) {
+        	logger.warning("Order processing interrupted: " + e.getMessage());
             e.printStackTrace();
         }
-		
+		logger.info("Order processing completed.");
         printFinalStock();
 	}
 	
 	private void fulfillOrder(Order order)
 	{
+		logger.info(Thread.currentThread().getName() + " processing order: " + order);
 		System.out.println(Thread.currentThread().getName() + " processing " + order);
 		for(String productId : order.getProductIds()) 
 		{
@@ -134,6 +168,7 @@ public class InventoryManager {
 			if (product.getQuantity() >= quantity) 
 			{
 				product.setQuantity(product.getQuantity() - quantity);
+				logger.info("Stock decreased for " + product.getName() + ". New quantity: " + product.getQuantity());
 				System.out.println(Thread.currentThread().getName() + " - Stock decreased for " + product.getName() + ": " + product.getQuantity());
 				System.out.println("Stock decreased for product: " + product.getName() + ". New Quantity: " + product.getQuantity());
 			}
@@ -144,13 +179,16 @@ public class InventoryManager {
 		}
 		else 
 		{
+			logger.warning("Product not found: " + id);
 			System.out.println("Product Not Found: " + product.getId());
 		}
 	}
 	
 	public void printFinalStock() {
+		logger.info("Final stock summary:");
         System.out.println("\nFinal stock summary:");
         for (Product product : products.values()) {
+        	logger.info("Product: " + product.getName() + ", Quantity: " + product.getQuantity());
             System.out.println("Product: " + product.getName() + ", Quantity: " + product.getQuantity());
         }
     }

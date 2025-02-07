@@ -1,0 +1,294 @@
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=8, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=4, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=10, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-1 processing order: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-2 processing order: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-3 processing order: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 7
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 9
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 8
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 6
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Buds. New quantity: 3
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager processOrders
+INFO: Order processing completed.
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager printFinalStock
+INFO: Final stock summary:
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Mobile, Quantity: 6
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Buds, Quantity: 3
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Tablet, Quantity: 8
+Feb 07, 2025 7:42:52 PM WareHouse.InventoryManager saveInventoryToFile
+INFO: Inventory saved to C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\updated_inventory.txt
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=8, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=4, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=10, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-1 processing order: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-2 processing order: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-3 processing order: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 7
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 9
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 6
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Buds. New quantity: 3
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 8
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager processOrders
+INFO: Order processing completed.
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager printFinalStock
+INFO: Final stock summary:
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Mobile, Quantity: 6
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Buds, Quantity: 3
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Tablet, Quantity: 8
+Feb 07, 2025 7:44:51 PM WareHouse.InventoryManager saveInventoryToFile
+INFO: Inventory saved to C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\updated_inventory.txt
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=8, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=4, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=5, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-2 processing order: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-3 processing order: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-1 processing order: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 7
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Buds. New quantity: 3
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 6
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 4
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 3
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager processOrders
+INFO: Order processing completed.
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager printFinalStock
+INFO: Final stock summary:
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Mobile, Quantity: 6
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Buds, Quantity: 3
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Tablet, Quantity: 3
+Feb 07, 2025 7:45:14 PM WareHouse.InventoryManager saveInventoryToFile
+INFO: Inventory saved to C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\updated_inventory.txt
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=8, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=4, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=5, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-1 processing order: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-3 processing order: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-2 processing order: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 4
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 7
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 3
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 6
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Buds. New quantity: 3
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager processOrders
+INFO: Order processing completed.
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager printFinalStock
+INFO: Final stock summary:
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Mobile, Quantity: 6
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Buds, Quantity: 3
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Tablet, Quantity: 3
+Feb 07, 2025 7:50:07 PM WareHouse.InventoryManager saveInventoryToFile
+INFO: Inventory saved to C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\updated_inventory.txt
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=5, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=5, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=5, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-2 processing order: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-1 processing order: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-3 processing order: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 4
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 4
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 3
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Buds. New quantity: 4
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 3
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager processOrders
+INFO: Order processing completed.
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager printFinalStock
+INFO: Final stock summary:
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Mobile, Quantity: 3
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Buds, Quantity: 4
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Tablet, Quantity: 3
+Feb 07, 2025 7:50:27 PM WareHouse.InventoryManager saveInventoryToFile
+INFO: Inventory saved to C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\updated_inventory.txt
+Feb 07, 2025 7:52:22 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:52:29 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=5, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:52:29 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=5, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:52:29 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=5, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:52:29 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:54:04 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:54:21 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:54:22 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:54:31 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:56:30 PM WareHouse.InventoryManager <init>
+INFO: InventoryManager initialized.
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=1, name=Mobile, quantity=11, location=Location [aisle=1, shelves=1, binNumbers=1]]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=2, name=Buds, quantity=11, location=Location [aisle=2, shelves=1, binNumbers=2]]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager addProduct
+INFO: Product added: Product [id=3, name=Tablet, quantity=11, location=Location [aisle=3, shelves=2, binNumbers=1]]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager loadInventoryFromFile
+INFO: Inventory loaded successfully from C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\inventory.txt
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager addOrder
+INFO: Order added: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager processOrders
+INFO: Order processing started.
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-1 processing order: Order [orderId=O2, productIds=[3], priority=EXPEDITED]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-3 processing order: Order [orderId=O1, productIds=[1, 2], priority=STANDARD]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager fulfillOrder
+INFO: pool-1-thread-2 processing order: Order [orderId=O3, productIds=[1, 3], priority=STANDARD]
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 10
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 10
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Tablet. New quantity: 9
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Mobile. New quantity: 9
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager decreaseStock
+INFO: Stock decreased for Buds. New quantity: 10
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager processOrders
+INFO: Order processing completed.
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager printFinalStock
+INFO: Final stock summary:
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Mobile, Quantity: 9
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Buds, Quantity: 10
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager printFinalStock
+INFO: Product: Tablet, Quantity: 9
+Feb 07, 2025 7:56:31 PM WareHouse.InventoryManager saveInventoryToFile
+INFO: Inventory saved to C:\Users\Roffin Jason\git\CoE_JavaFSD\TechM_Tasks\src\WareHouse\updated_inventory.txt
