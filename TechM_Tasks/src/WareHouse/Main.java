@@ -21,6 +21,7 @@ public class Main {
         System.out.println("Processing orders:");
         im.processOrders();
         
+        System.out.println("------------------------------");
         im.saveInventoryToFile("C:\\Users\\Roffin Jason\\git\\CoE_JavaFSD\\TechM_Tasks\\src\\WareHouse\\updated_inventory.txt");
 
         
