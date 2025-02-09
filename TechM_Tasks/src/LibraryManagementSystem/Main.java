@@ -24,41 +24,39 @@ public class Main {
       
       System.out.println(libManager.books);
       
+      LibraryUserTask t1 = new LibraryUserTask(libManager, "1", "68763486423", "borrow");
+      LibraryUserTask t2 = new LibraryUserTask(libManager, "2", "68763486529", "borrow");
+      LibraryUserTask t3 = new LibraryUserTask(libManager, "3", "68763486529", "reserve");
+      LibraryUserTask t4 = new LibraryUserTask(libManager, "2", "68763486423", "reserve");
+      LibraryUserTask t5 = new LibraryUserTask(libManager, "1", "68763486423", "return");
+      LibraryUserTask t6 = new LibraryUserTask(libManager, "2", "68763486529", "return");
+      
+      t1.start();
+      t2.start();
+      t3.start();
+      t4.start();
+      t5.start();
+      t6.start();
+      
       try {
-		libManager.borrowBook("68763486423","1");
-		libManager.borrowBook("68763486529","1");
-	} catch (BookNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (UserNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (MaxBooksAllowedException e) {
+		t1.join();
+		t2.join();
+		t3.join();
+		t4.join();
+		t5.join();
+		t6.join();
+	} catch (InterruptedException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
       
-    System.out.println(libManager.users);  
-    System.out.println(libManager.books);
-    
-    try {
-		libManager.reserveBook("68763486529","2");
-		libManager.reserveBook("68763486529","3");
-	} catch (BookNotFoundException | UserNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-    
-    try {
-		libManager.returnBook("68763486423","1");
-		libManager.returnBook("68763486529","1");
-	} catch (BookNotFoundException | UserNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-    
-    System.out.println(libManager.users);  
-    System.out.println(libManager.books);
+      System.out.println("\nFinal state of users:");
+      System.out.println(libManager.users);
+
+      System.out.println("\nFinal state of books:");
+      System.out.println(libManager.books);
+      
+   
     
       
    }

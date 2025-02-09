@@ -16,8 +16,8 @@ public abstract class LibrarySystem implements ILibrary {
     public abstract void addBook(Book book);
     public abstract void addUser(User user);
 
-    
-    public void borrowBook(String ISBN, String userID) throws BookNotFoundException, UserNotFoundException, MaxBooksAllowedException {
+    @Override
+    public synchronized void borrowBook(String ISBN, String userID) throws BookNotFoundException, UserNotFoundException, MaxBooksAllowedException {
         boolean bookFound = false;
         boolean userFound = false;
 
@@ -39,8 +39,8 @@ public abstract class LibrarySystem implements ILibrary {
         }
     }
 
-    
-    public void returnBook(String ISBN, String userID) throws BookNotFoundException, UserNotFoundException {
+    @Override
+    public synchronized void returnBook(String ISBN, String userID) throws BookNotFoundException, UserNotFoundException {
         boolean bookReturned = false;
 
         for (User user : users) {
@@ -72,8 +72,8 @@ public abstract class LibrarySystem implements ILibrary {
     }
 
 
-    
-    public void reserveBook(String ISBN, String userID) throws BookNotFoundException, UserNotFoundException {
+    @Override
+    public synchronized void reserveBook(String ISBN, String userID) throws BookNotFoundException, UserNotFoundException {
         boolean bookAvailable = false;
 
         
@@ -110,8 +110,8 @@ public abstract class LibrarySystem implements ILibrary {
         return null;
     }
 
-    
-    public Book searchBook(String title) {
+    @Override
+    public synchronized Book searchBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
                 return book;
