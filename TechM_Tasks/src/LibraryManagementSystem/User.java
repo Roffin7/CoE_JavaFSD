@@ -1,5 +1,6 @@
 package LibraryManagementSystem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -7,11 +8,10 @@ public class User {
 	   private String userID;
 	   private List<Book> borrowedBooks;
 	   
-	public User(String name, String userID, List<Book> borrowedBooks) {
-		super();
+	public User(String name, String userID) {
 		this.name = name;
 		this.userID = userID;
-		this.borrowedBooks = borrowedBooks;
+		this.borrowedBooks = new ArrayList<>();
 	}
 
 	public String getName() {
@@ -34,9 +34,16 @@ public class User {
 		return borrowedBooks;
 	}
 
-	public void setBorrowedBooks(List<Book> borrowedBooks) {
-		this.borrowedBooks = borrowedBooks;
+	public void setBorrowedBooks(Book borrowedBooks) {
+		this.borrowedBooks.add(borrowedBooks);
 	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", userID=" + userID + ", borrowedBooks=" + borrowedBooks + "]";
+	}
+	
+	
 	
 	   
 	}

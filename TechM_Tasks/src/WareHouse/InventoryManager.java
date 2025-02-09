@@ -20,7 +20,7 @@ public class InventoryManager {
 	private ExecutorService executor;
 	
 	public InventoryManager() 
-	{
+	{	
 		setupLogger();
 		this.products = new ConcurrentHashMap<>();
 		this.orderQueue = new PriorityQueue<>();

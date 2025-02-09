@@ -29,5 +29,12 @@ public class Book {
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
+
+	@Override
+	public String toString() {
+		return "Book [title=" + title + ", author=" + author + ", ISBN=" + ISBN + "]";
+	}
+	
+	
 	   
 	}
