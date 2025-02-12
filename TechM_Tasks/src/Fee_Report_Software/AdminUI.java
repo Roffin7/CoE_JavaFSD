@@ -49,8 +49,8 @@ public class AdminUI {
 		System.out.print("Enter Username: ");
 		String name = sc.next();
 		System.out.print("\nEnter Password: ");
-		System.out.println();
 		String password = sc.next();
+		System.out.println();
 		
 		if (adminService.loginOperation(name,password)) 
 		{
@@ -147,7 +147,7 @@ public class AdminUI {
 	     
 	     if (adminService.addAccountant(accountant)) 
 	     {
-	    	 System.out.println("Accountant Added Successfully");
+	    	 System.out.println("\nAccountant Added Successfully");
 	     }
 	     else 
 	     {

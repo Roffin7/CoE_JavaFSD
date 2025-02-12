@@ -25,7 +25,7 @@ public class Main {
                 
                 case 2:
                     AccountantUI accountantUI = new AccountantUI();
-                  
+                    accountantUI.start();
                     break;
                 
                 case 3:
@@ -36,7 +36,8 @@ public class Main {
                     System.out.println("Invalid Number. Please choose a valid option.");
             }
         }        
-        System.out.println("Thank you!");
+        System.out.println();
+        System.out.println("------- Thank you! -------");
      
     }
 }
