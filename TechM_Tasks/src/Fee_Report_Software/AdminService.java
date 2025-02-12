@@ -4,31 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminService {
+	private DatabaseService dbs = new DatabaseService();
 
 	
 	public boolean loginOperation(String name,String password) 
 	{
-		return true;
+		return dbs.loginOperations(name, password);
 	}
 	
 	public boolean registerOperation(String name,String password) 
 	{
-		return true;
+		return dbs.registration(name,password);
 	}
 
 	public boolean addAccountant(Accountant accountant) 
 	{
-		return true;
+		return dbs.addAccountants(accountant);
 	}
 	
-	public boolean editAccountant(Accountant accountant) 
+	public void viewAccountant()
 	{
-		return true;
+		dbs.viewAccountants();
 	}
 	
-	public boolean deleteAccountant(int id) 
+	public void editAccountant(int id,String new_name,String new_email,String new_phone,String new_password) 
 	{
-		return true;
+		dbs.editAccountants(id,new_name,new_email,new_phone,new_password);
+	}
+	
+	public void deleteAccountant(int id) 
+	{
+		dbs.deleteAccountants(id);
 	}
 	
 	

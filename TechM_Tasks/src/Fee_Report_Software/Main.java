@@ -35,8 +35,7 @@ public class Main {
                 default:
                     System.out.println("Invalid Number. Please choose a valid option.");
             }
-        }
-        
+        }        
         System.out.println("Thank you!");
      
     }

@@ -157,48 +157,25 @@ public class AdminUI {
 	
 	private void viewAccountant() 
 	{
-		System.out.println("\n--- List of Accountants ---");
-		List<Accountant> accountants = adminService.getAccountants();
-		
-		if (accountants.isEmpty()) 
-		{
-			System.out.println("No accountants found.");
-		}
-		else 
-		{
-			for(Accountant accountant:accountants) 
-			{
-				System.out.println(accountant);
-			}
-		}
+		adminService.viewAccountant();
 	}
 	
 	private void editAccountant() 
 	{
-		System.out.println("\n----- Edit Accountant -----");
-	    System.out.print("Enter New Accountant Name: ");
-	    String name = sc.nextLine();
+		System.out.print("\nEnter user id: ");
+		int id = sc.nextInt();sc.nextLine();
+		System.out.println();
+		
+		System.out.print("Enter New Accountant Name: ");
+	    String new_name = sc.nextLine();
 	    System.out.print("Enter New Accountant Email: ");
-	    String email = sc.nextLine();
+	    String new_email = sc.nextLine();
 	    System.out.print("Enter New Accountant Phone: ");
-	    String phone = sc.nextLine();
+	    String new_phone = sc.nextLine();
 	    System.out.print("Enter New Accountant Password: ");
-	    String password = sc.nextLine();
-	    
-	    Accountant accountant = new Accountant();
-	    accountant.setName(name);
-	    accountant.setEmail(email);
-	    accountant.setPhone(phone);
-	    accountant.setPassword(password);
-	    
-	    if (adminService.editAccountant(accountant)) 
-	    {
-	    	System.out.println();
-	    }
-	    else 
-	    {
-	    	System.out.println();
-	    }
+	    String new_password = sc.nextLine();
+		
+		adminService.editAccountant(id,new_name,new_email,new_phone,new_password);
 	}
 	
 	private void deleteAccountant() 
@@ -206,14 +183,7 @@ public class AdminUI {
 		System.out.print("\nEnter Accountant ID to Delete: ");
         int id = sc.nextInt();sc.nextLine();
         
-        if(adminService.deleteAccountant(id)) 
-        {
-        	System.out.println("Accountant deleted successfully!");
-        }
-        else 
-        {
-        	System.out.println("Failed to delete accountant! Please check the ID.");
-        }
+        adminService.deleteAccountant(id);
 	}
 	
 	
