@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #8B5CF6; /* Soft purple */
-  --secondary-color: #6D28D9; /* Deeper purple */
-  --text-color: #E5E7EB; /* Light gray text */
-  --light-text: #9CA3AF; /* Muted gray */
-  --background: #111827; /* Deep navy background */
-  --section-bg: #1F2937; /* Dark gray-blue section background */
+  --primary-color: #8B5CF6; 
+  --secondary-color: #6D28D9; 
+  --text-color: #E5E7EB; 
+  --light-text: #9CA3AF; 
+  --background: #111827; 
+  --section-bg: #1F2937; 
 }
 
   
