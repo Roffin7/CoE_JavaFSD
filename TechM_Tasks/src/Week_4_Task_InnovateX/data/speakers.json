@@ -1,0 +1,31 @@
+{
+    "speakers": [
+      {
+        "id": 1,
+        "name": "Ronald Chambers",
+        "title": "AI Research Director",
+        "company": "TechVision Labs",
+        "bio": "Leading expert in artificial intelligence and machine learning",
+        "image": "assets\\images\\i1.jpg",
+        "track": "ai"
+      },
+      {
+        "id": 2,
+        "name": "Ben Smith",
+        "title": "Cloud Architect",
+        "company": "CloudScale Solutions",
+        "bio": "Specialist in cloud infrastructure and scalability",
+        "image": "assets\\images\\i2.jpg",
+        "track": "cloud"
+      },
+      {
+        "id": 3,
+        "name": "Maria Rodriguez",
+        "title": "Web Performance Engineer",
+        "company": "FastWeb Technologies",
+        "bio": "Expert in web performance optimization",
+        "image": "assets\\images\\i3.jpg",
+        "track": "web"
+      }
+    ]
+  }

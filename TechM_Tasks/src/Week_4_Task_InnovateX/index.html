@@ -3,9 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovateX</title>
+    <title>InnovateX Conference</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">InnovateX</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
     
+
+
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <h1>Welcome to InnovateX 2025</h1>
+                <p>Join us for the most innovative tech conference of the year</p>
+                <div id="countdown" class="countdown">
+                    <!-- Countdown will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About InnovateX</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>InnovateX 2025 is the premier technology conference that brings together industry leaders, innovators, and tech enthusiasts from around the globe. Our mission is to inspire, educate, and connect the tech community.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature">
+                                <h3>50+ Speakers</h3>
+                                <p>Learn from industry experts and thought leaders</p>
+                            </div>
+                            <div class="feature">
+                                <h3>3 Days</h3>
+                                <p>Packed with keynotes, workshops, and networking</p>
+                            </div>
+                            <div class="feature">
+                                <h3>4 Tracks</h3>
+                                <p>Specialized content for every tech professional</p>
+                            </div>
+                        </div>
+
+                        <div class="about-highlights">
+                            <h3>What to Expect</h3>
+                            <ul>
+                                <li>Cutting-edge presentations on AI, Cloud, Web, and emerging technologies</li>
+                                <li>Interactive workshops and hands-on learning sessions</li>
+                                <li>Networking opportunities with industry leaders</li>
+                                <li>Product demonstrations and innovation showcases</li>
+                                <li>Career development and mentorship programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="section">
+            <div class="container">
+                <h2>Conference Schedule</h2>
+                <div class="schedule-filters">
+                    <button class="filter-btn active" data-track="all">All</button>
+                    <button class="filter-btn" data-track="web">Web</button>
+                    <button class="filter-btn" data-track="ai">AI</button>
+                    <button class="filter-btn" data-track="cloud">Cloud</button>
+                </div>
+                <div id="schedule-container" class="schedule-container"></div>
+            </div>
+        </section>
+
+        <section id="speakers" class="section">
+            <div class="container">
+                <h2>Featured Speakers</h2>
+                <div id="speakers-grid" class="speakers-grid"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 InnovateX Conference. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>

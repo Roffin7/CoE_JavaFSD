@@ -1,0 +1,28 @@
+{
+    "schedule": [
+      {
+        "id": 1,
+        "time": "09:00 - 10:00",
+        "title": "Opening Keynote",
+        "speaker": "Dr. Sarah Chen",
+        "track": "all",
+        "location": "Main Hall"
+      },
+      {
+        "id": 2,
+        "time": "10:15 - 11:15",
+        "title": "Future of Cloud Computing",
+        "speaker": "James Wilson",
+        "track": "cloud",
+        "location": "Room A"
+      },
+      {
+        "id": 3,
+        "time": "11:30 - 12:30",
+        "title": "Web Performance Optimization",
+        "speaker": "Maria Rodriguez",
+        "track": "web",
+        "location": "Room B"
+      }
+    ]
+  }
